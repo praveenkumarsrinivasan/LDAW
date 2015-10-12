@@ -1,5 +1,5 @@
 ### Named Entity Recognition and Classification[NERC]
-through 
+through
 
 Latent Dirichlet Allocation[LDA]
 
@@ -24,7 +24,7 @@ Notes:
 
 ---
 
-### Multi-Dimensional Exploratory Search on Unstructured Data 
+### Multi-Dimensional Exploratory Search on Unstructured Data
 <hr/>
 
 - **Multi-Dimensional Queries** are those queries that span over a specific semantic field or over multiple semantic fields of interest, but contains multiple items of interest.
@@ -65,7 +65,7 @@ Notes:
 
 Named Entity Recognition and Classification (NERC)
 
-on 
+on
 
 Twitter Data
 
@@ -185,7 +185,7 @@ Latent Dirichlet Allocation[LDA]
 - Generative Probabilistic Process
 - Mixed Membership Model
 - Introduced by David Blei, Andrew Ng, Micheal Jordan in 2003
-- There are different variation of LDA based on different constraints
+- There are different variation of LDA based on constraints used
 
 -----
 
@@ -198,7 +198,7 @@ Latent Dirichlet Allocation[LDA]
 
 ---
 
-### LDA 
+### LDA - Intuition
 <hr/>
 
 <img src="./images/intuition.png" alt="LDA Intuition" width="600" />
@@ -207,21 +207,61 @@ Latent Dirichlet Allocation[LDA]
 
 ---
 
-### LDA
+### Generative Model
 <hr/>
 
-<img src="./images/topics.png" alt="LDA Topic Distribution" width="800" />
+<img src="./images/topics.png" alt="LDA Topic Distribution" width="600" />
+
+- Each document is a mixture of topics
+- Each word is drawn from one of those topics
 
 <small>Source: LDA - David Blei, Andrew Ng, Micheal Jordan</small>
 
 ---
 
-###LDA
+### Posterior Distribution
 <hr/>
 
-<img src="./images/inference.png" alt="LDA Intuition" width="600" />
+<img src="./images/inference.png" alt="LDA Inference" width="600" />
+
+- However, in reality we have only Documents
+- Our goal is to infer the underlying topics
+- We use statistical models to infer the posterior
 
 <small>Source: LDA - David Blei, Andrew Ng, Micheal Jordan</small>
+
+---
+
+### LDA : Plate Notation
+<hr/>
+
+<img src="./images/lda-plate_notation.png" alt="LDA Plate Notation" width="600" />
+
+<small>Source: LDA - David Blei, Andrew Ng, Micheal Jordan</small>
+
+---
+
+### LDA Notations
+
+---
+
+### Model?
+
+---
+
+### Labelled LDA : Plate Notation
+<hr/>
+
+<img src="./images/labelled_lda-plate_notation.png" alt="Labelled LDA - Plate Notation" width="600" />
+
+<small>Labeled LDA: Daniel Ramage, David Hall, Ramesh Nallapati and Christopher D. Manning</small>
+
+---
+
+### Labelled LDA Notations
+
+---
+
 
 ---
 
