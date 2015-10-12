@@ -16,6 +16,8 @@
         <!--<link rel="stylesheet" href="../Scripts/lib/reveal/css/theme/night.css" id="theme">-->
         <link rel="stylesheet" href="../Scripts/lib/reveal/css/theme/simple.css" id="theme">
 
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
         <!-- Printing and PDF exports -->
         <script>
             var link = document.createElement( 'link' );
@@ -23,6 +25,18 @@
             link.type = 'text/css';
             link.href = window.location.search.match( /print-pdf/gi ) ? '../Scripts/lib/reveal/css/print/pdf.css' : '../Scripts/lib/reveal/css/print/paper.css';
             document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            jax: ["input/TeX", "output/HTML-CSS"],
+            tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true
+            },
+            "HTML-CSS": { availableFonts: ["TeX"] }
+        });
         </script>
 
     </head>
