@@ -36,6 +36,15 @@ Here, The probability distribution is broccoli(0.3), bananas(0.5), breakfast(0.1
 
 ---
 
+### Generative Model
+<hr/>
+
+- **Topics**: probability distribution over words
+- Topic Model are based on the idea that **documents are mixture of topics**
+- **Topic Model**: generative model for documents
+
+-----
+
 Objective: Discover topics that these sentences contain.
 
 For example, given these sentences and asked for 2 topics
@@ -61,6 +70,14 @@ Output will be something like
 - Topic B: 20% chinchillas, 20% kittens, 20% cute, 15% hamster
     (Topic B: Interpreted as cute animals)
 
+-----
+
+### Generative Probabilistic Model
+<hr/>
+
+- Treats data as observations that arise from a generative probabilistic process that includes hidden variables
+- Infer the hidden variables using posterior inference
+- Fit the new data into the estimated model
 ---
 
 - In reality, we can’t directly observe topics;
@@ -141,3 +158,118 @@ How does LDA Work?
 
 - Alan Ritter
 
+
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" style="padding: 15px;">
+  <mo stretchy="false">(</mo>
+  <munderover>
+    <mo>&#x220F;<!-- ∏ --></mo>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>K</mi>
+    </mrow>
+  </munderover>
+  <mi>p</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>&#x03B2;<!-- β --></mi>
+    <mi>k</mi>
+  </msub>
+  <mrow class="MJX-TeXAtom-ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>&#x03B7;<!-- η --></mi>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">(</mo>
+  <munderover>
+    <mo>&#x220F;<!-- ∏ --></mo>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>d</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>D</mi>
+    </mrow>
+  </munderover>
+  <mi>p</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>&#x03B8;<!-- θ --></mi>
+    <mi>d</mi>
+  </msub>
+  <mrow class="MJX-TeXAtom-ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>&#x03B1;<!-- α --></mi>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">(</mo>
+  <munderover>
+    <mo>&#x220F;<!-- ∏ --></mo>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow class="MJX-TeXAtom-ORD">
+      <msub>
+        <mi>N</mi>
+        <mi>d</mi>
+      </msub>
+    </mrow>
+  </munderover>
+  <mi>p</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>z</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>d</mi>
+      <mo>,</mo>
+      <mi>n</mi>
+    </mrow>
+  </msub>
+  <mrow class="MJX-TeXAtom-ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <msub>
+    <mi>&#x03B8;<!-- θ --></mi>
+    <mi>d</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">(</mo>
+  <mi>p</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>w</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>d</mi>
+      <mo>,</mo>
+      <mi>n</mi>
+    </mrow>
+  </msub>
+  <mrow class="MJX-TeXAtom-ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <msub>
+    <mi>z</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>d</mi>
+      <mo>,</mo>
+      <mi>n</mi>
+    </mrow>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>&#x03B2;<!-- β --></mi>
+    <mi>k</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">)</mo>
+</math>

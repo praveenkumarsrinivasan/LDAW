@@ -16,6 +16,12 @@
         <!--<link rel="stylesheet" href="../Scripts/lib/reveal/css/theme/night.css" id="theme">-->
         <link rel="stylesheet" href="../Scripts/lib/reveal/css/theme/simple.css" id="theme">
 
+        <style>
+            .small {
+                font-size : "80%";
+            }
+        </style>
+
         <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
         <!-- Printing and PDF exports -->
@@ -31,9 +37,9 @@
         MathJax.Hub.Config({
             jax: ["input/TeX", "output/HTML-CSS"],
             tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            processEscapes: true
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: true
             },
             "HTML-CSS": { availableFonts: ["TeX"] }
         });
