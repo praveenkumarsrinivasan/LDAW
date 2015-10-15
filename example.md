@@ -473,17 +473,17 @@ Notes:
 - we have to pick a value of alpha eta suitable
 - for alpha the expectation is to find few topics in a document. 
 - alpha equal to 0.1 would result in few topics for each document 
-- similarly  for eta the expectation is to associate few words to a topic
-- and expect a word to be associated with one or two topics so eta is 0.001 
+- Words given topic is Multinomial.
+- We have topics from which we pick words to generate the document. As we have multiple outcomes(words) for each topic,
+    it is a Multinomial distribution
 
 
 $$
 p(\vec{\theta}|\vec{\alpha}) = Dir(\vec{\theta}|\vec{\alpha}) = \frac{\Gamma\left(\sum_{k=1}^K\alpha_{k}\right)}{\prod_{k=1}^K\Gamma\left(\alpha_k\right)}\prod_{k=1}^K\theta_{k}^{\alpha-1}
 $$
 
-- Words given topic is Multinomial.
-- We have topics from which we pick words to generate the document. As we have multiple outcomes(words) for each topic,
-    it is a Multinomial distribution
+- similarly  for eta the expectation is to associate few words to a topic
+- and expect a word to be associated with one or two topics so eta is 0.001 
 - Next, we infer the probability of topic given word using Bayesian Statistics.
 - We do this by use Dirichlet Prior to estimate the posterior distribution which is probability of topic given word
 - Multivariate generalization of the Beta distribution
@@ -560,13 +560,13 @@ $$
 
 - To obtain the joint posterior distribution of the hidden variables conditional on the observations
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" style="padding: 15px;">
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mi>p</mi>
   <mrow>
     <mo>(</mo>
-    <mi>&#x03B8;<!-- θ --></mi>
-    <mo>,</mo>
     <mi>&#x03B2;<!-- β --></mi>
+    <mo>,</mo>
+    <mi>&#x03B8;<!-- θ --></mi>
     <mo>,</mo>
     <mi>z</mi>
     <mrow class="MJX-TeXAtom-ORD">
@@ -585,13 +585,13 @@ $$
       <mi>p</mi>
       <mrow>
         <mo>(</mo>
-        <mi>w</mi>
+        <mi>&#x03B2;<!-- β --></mi>
         <mo>,</mo>
         <mi>&#x03B8;<!-- θ --></mi>
         <mo>,</mo>
-        <mi>&#x03B2;<!-- β --></mi>
-        <mo>,</mo>
         <mi>z</mi>
+        <mo>,</mo>
+        <mi>w</mi>
         <mrow class="MJX-TeXAtom-ORD">
           <mo stretchy="false">|</mo>
         </mrow>
@@ -630,7 +630,7 @@ $$
     + Collapsed variational inference (Teh et al., 2006)
 
 Notes:
-$$p\left(\theta, \beta, z | w, \alpha, \eta \right) = \frac{p\left(w, \theta,\beta, z| \alpha, \eta\right)}{p(w|\alpha,\eta)}$$
+$$p\left(\beta, \theta, z | w, \alpha, \eta \right) = \frac{p\left(\beta, \theta, z, w | \alpha, \eta\right)}{p(w|\alpha,\eta)}$$
 
 ---
 
